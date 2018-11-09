@@ -1,0 +1,87 @@
+/*
+ * cydonia v0.0.5+ - Classes
+ * Copyright © 2014, 2015, 2016, 2017, 2018 Boian Berberov
+ *
+ * Released under the terms of the
+ * European Union Public License version 1.2 only.
+ *
+ * License text: https://joinup.ec.europa.eu/collection/eupl/eupl-text-11-12
+ *
+ * SPDX-License-Identifier: EUPL-1.2
+ */
+
+/*== Backgrounds =============================================================*/
+
+.maxspect,
+.maxspect-LT, .maxspect-CT, .maxspect-RT,
+.maxspect-LM, .maxspect-CM, .maxspect-RM,
+.maxspect-LB, .maxspect-CB, .maxspect-RB
+{
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.maxspect-LT	{	background-position:   0%   0%;	}
+.maxspect-CT	{	background-position:  50%   0%;	}
+.maxspect-RT	{	background-position: 100%   0%;	}
+
+.maxspect-LM
+{	background-position:   0%  50%;	}
+.maxspect,
+.maxspect-CM
+{	background-position:  50%  50%;	}
+.maxspect-RM
+{	background-position: 100%  50%;	}
+
+.maxspect-LB	{	background-position:   0% 100%;	}
+.maxspect-CB	{	background-position:  50% 100%;	}
+.maxspect-RB	{	background-position: 100% 100%;	}
+
+
+.sidebars, .stretched
+{
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.sidebars	{	background-size: contain;	}
+.stretched	{	background-size: 100% 100%;	}
+
+/*== Alignment ===============================================================*/
+
+/*-- Block -------------------------------------------------------------------*/
+
+.block-left,
+.block-center,
+.block-right	{
+	display: block;
+}
+.block-left
+{	margin-right: auto;	}
+.block-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.block-right
+{	margin-left: auto;	}
+
+/*-- Inline-Block ------------------------------------------------------------*/
+
+.iblock-middle	{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*-- Text --------------------------------------------------------------------*/
+
+.text-left   {	text-align:   left;	}
+.text-center {	text-align: center;	}
+.text-left   {	text-align:  right;	}
+
+/*== Element-specific ========================================================*/
+
+img.in-text,
+svg.in-text
+{
+	margin: 0.25em;
+	vertical-align: middle;
+}

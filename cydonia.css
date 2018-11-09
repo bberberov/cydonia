@@ -1,0 +1,779 @@
+/*
+ * cydonia v0.0.5+ - Baseline
+ * Copyright © 2014, 2015, 2016, 2017, 2018 Boian Berberov
+ *
+ * Released under the terms of the
+ * European Union Public License version 1.2 only.
+ *
+ * License text: https://joinup.ec.europa.eu/collection/eupl/eupl-text-11-12
+ *
+ * SPDX-License-Identifier: EUPL-1.2
+ */
+
+/*
+ * Based on HTML Living Standard — Last Updated 2 November 2018
+ * https://html.spec.whatwg.org/multipage/#toc-semantics
+ */
+
+/*** 4.1 The document element *************************************************/
+
+html	{
+	border: none;
+	display: block;
+	margin: 0em;
+	padding: 0em;
+}
+
+/*** 4.2 Document metadata ****************************************************/
+
+head	{	display: none;	}
+
+/*
+ * The remaining elements are hidden:
+ * title, base, link, meta, style
+ */
+
+/*** 4.3 Sections *************************************************************/
+
+body,
+article, section,
+nav, aside,
+h1, h2, h3, h4, h5, h6,
+hgroup,
+header, footer,
+address
+{
+	border: none;
+
+	text-align: left;
+	text-decoration: none;
+	text-indent: none;
+	text-transform: none;
+}
+
+body,
+article, section,
+h1, h2, h3, h4, h5, h6,
+hgroup,
+header, footer,
+address
+{	display: block;	}
+
+nav, aside
+{	display: inline-block;	}
+
+/*--- Body Defaults ----------------------------------------------------------*/
+
+body
+{
+	margin: 0em;
+	padding: 1em;
+
+	background-color: #fff;
+	color: #000;
+	fill: #000;
+
+	font-family: sans-serif;
+	font-size: 11.0pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+/*----------------------------------------------------------------------------*/
+
+article, section,
+aside, nav,
+h1, h2, h3, h4, h5, h6,
+hgroup,
+header, footer,
+address
+{
+	background-color: transparent;
+	color: inherit;
+}
+
+article, section,
+aside, nav,
+hgroup,
+header, footer,
+address
+{
+	margin: 0em;
+	padding: 0em;
+
+	font: inherit;
+}
+
+/*-- Headings, headers and footers -------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+	/*** margin for :first-child is cascaded ***/
+	margin: 1em 0em 0em 0em;
+	padding: 0em;
+
+	font-family: inherit;
+	/*** font-size is cascaded ***/
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+
+
+	/* TODO: Fix line-height*/
+	line-height: 1em;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child
+{	margin: 0em;	}
+
+h1	{	font-size: 3.6em;	}
+h2	{	font-size: 2.9em;	}
+h3	{	font-size: 2.3em;	}
+h4	{	font-size: 1.8em;	}
+h5	{	font-size: 1.4em;	}
+h6	{	font-size: 1.1em;	}
+
+/*** 4.4 Grouping content *****************************************************/
+
+p,
+hr,
+pre,
+blockquote,
+ol, ul,
+menu,
+li,
+dl,
+dt, dd,
+figure,
+figcaption,
+main, div
+{
+	border: none;
+
+	background-color: transparent;
+	color: inherit;
+
+	/*** font properties overridden by cascades ***/
+	font: inherit;
+	/*** TODO Review text- property inheritance ***/
+	text-decoration: inherit;
+	text-transform: inherit;
+}
+
+/*----------------------------------------------------------------------------*/
+
+p,
+hr,
+pre,
+blockquote,
+ol, ul,
+dl,
+figcaption,
+main, div
+{	display: block;	}
+
+menu,
+figure
+{
+	display: inline-block;
+
+	vertical-align: top;
+}
+
+li,
+dt, dd
+{	display: list-item;	}
+
+/*-- p, hr, pre, blockquote --------------------------------------------------*/
+
+p,
+hr,
+pre,
+blockquote
+{	padding: 0em;	}
+
+p,
+pre
+{
+	border: none;
+	margin: 1em 0em;
+}
+p:first-child,
+pre:first-child
+{	margin-top: 0em;	}
+p:last-child,
+pre:first-child
+{	margin-bottom: 0em;	}
+
+hr	{
+	/* TODO: Review normalize.css for fixups on borders */
+	border: none;
+	border-top: 0.125em solid;
+	border-bottom: 0.125em solid;
+	height: 0em;
+	margin: 1em 2em;
+}
+
+pre	{
+	/* TODO: Review normalize.css for fixups */
+	font-family: monospace;
+	white-space: pre;
+}
+
+blockquote	{
+	border: none;
+	border-left: 0.5em solid #ccc;
+	margin: 1em;
+	padding-left: 0.5em;
+
+	font-style: italic;
+}
+
+/*-- Lists -------------------------------------------------------------------*/
+
+ol, ul,
+dl
+{
+	margin: 0em;
+	padding: 0em 0em 0em 2.5em;
+}
+
+/* TODO: FIX
+li > ol:first-child	{	margin-top: 0em;	}
+li > ol:last-child	{	margin-bottom: 0em;	}
+li > ul:first-child	{	margin-top: 0em;	}
+li > ul:last-child	{	margin-bottom: 0em;	}
+*/
+
+menu	{
+	margin: 1em;
+	padding: 0em;
+}
+
+li,
+dt, dd
+{
+	margin: 0em;
+	padding: 0em;
+
+	text-align: left;
+	text-indent: none;
+}
+
+li	{	display: list-item;	}
+
+ol > li	{	list-style: decimal outside;	}
+ul > li	{	list-style:  square outside;	}
+
+dt, dd
+{	display: block;	}
+
+dt	{	font-weight: bold;	}
+dd	{	margin-left: 1em;	}
+
+/*-- Figures -----------------------------------------------------------------*/
+
+figure,
+figcaption
+{	padding: 0em;	}
+
+figure	{
+	margin: 1em;
+	overflow: auto;
+}
+
+figcaption	{
+	margin: 0em;
+
+	text-align: center;
+	text-decoration: none;
+	text-indent: none;
+	text-transform: none;
+}
+figcaption:first-child	{	margin-bottom: 0.5em;	}
+figcaption:last-child 	{	margin-top:    0.5em;	}
+
+/*** 4.5 Text-level semantics *************************************************/
+
+/*** The a element is in section 4.6 ***/
+
+em, strong, small, s,
+cite, q,
+code, var, samp, kbd,
+sub, sup,
+i, b, u,
+mark
+{
+	border: none;
+	display: inline;
+
+	background-color: transparent;
+	color: inherit;
+
+	font: inherit;
+	text-decoration: inherit;
+	text-transform: inherit;
+}
+
+/*
+dfn	{}
+abbr	{}
+ruby	{}
+rt	{}
+rp	{}
+data	{}
+time	{}
+bdi	{}
+bdo	{}
+span	{}
+br	{}
+wbr	{}
+*/
+
+/*----------------------------------------------------------------------------*/
+
+em	{
+	font-style: italic;
+	text-decoration: underline;
+}
+
+strong	{
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+small	{	font-size: 0.6em;	}
+s	{	text-decoration: line-through;	}
+
+cite	{	font-style: italic;	}
+
+q	{	font-weight: lighter;	}
+
+code, var, samp, kbd
+{	font-family: monospace;	}
+
+sub, sup
+{	font-size: 0.6em;	}
+sub	{	vertical-align: bottom;	}
+sup	{	vertical-align:    top;	}
+
+i	{	font-style: italic;	}
+
+b	{	font-weight: bold;	}
+
+u	{	text-decoration: underline;	}
+
+mark	{	background-color: #ff6; }
+
+/*** 4.6 Links ****************************************************************/
+
+/*** TODO: Fix links ***/
+
+/*** All links, including a[name] ***/
+a	{
+	background-color: transparent;
+	color: inherit;
+
+	font: inherit;
+	text-decoration: inherit;
+	text-transform: inherit;
+
+	outline: none;
+}
+
+/*
+ * TODO: Review order
+ *
+ * Keep Order !!!
+ *
+ * :link
+ * :visited
+ * :focus
+ * :hover
+ * :active
+ */
+
+a.fake,
+a[href]:link,
+a.fake:link
+{	color: #00c;	}
+
+a[href]:visited,
+a.fake:visited
+{	color: #a00;	}
+
+a[href]:focus,
+a.fake:focus
+{	outline: thin dotted;	}
+
+a[href]:hover,
+a.fake:hover
+{
+	color: #69f;
+
+	text-decoration: underline;
+}
+a[href]:active,
+a.fake:active
+{
+	color: #f11;
+
+	text-decoration: underline;
+}
+
+a.no-u[href],
+a.no-u[href]:link,
+a.no-u[href]:visited,
+a.no-u[href]:focus,
+a.no-u[href]:hover,
+a.no-u[href]:active
+{	text-decoration: none;	}
+
+/*** 4.7 Edits ****************************************************************/
+
+ins, del
+{	display: inline;	}
+
+/*** TODO: Fix ***/
+ins	{	text-decoration: overline;	}
+
+/*** TODO: Fix ***/
+del	{
+	text-decoration: line-through;
+	font-weight: lighter;
+}
+
+/*** 4.8 Embedded content *****************************************************/
+
+/*
+picture	{}
+source	{}
+*/
+
+img	{	border: none;	}
+
+/*
+iframe	{}
+embed	{}
+object	{}
+param	{}
+video	{}
+audio	{}
+track	{}
+map	{}
+area	{}
+*/
+
+math	{
+	display: inline-block;
+
+	background-color: transparent;
+	color: inherit;
+}
+svg	{	fill: inherit;	}
+
+/* TODO: MathML fonts */
+
+/*** 4.9 Tabular data *********************************************************/
+
+table	{
+	border: 0.125em solid;
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: table;
+	margin: 1em;
+
+	font: inherit;
+}
+
+caption	{
+	display: table-caption;
+	margin: 0em 0em 0.5em 0em;
+
+	font: inherit;
+	text-align: left;
+	text-decoration: none;
+	text-indent: none;
+	text-transform: none;
+
+	caption-side: top;
+}
+
+colgroup	{	display: table-column-group;	}
+col     	{	display: table-column;	}
+tbody   	{	display: table-row-group;	}
+thead   	{	display: table-header-group;	}
+tfoot   	{	display: table-footer-group;	}
+tr      	{	display: table-row;	}
+
+td, th
+{
+	border: 0.125em solid;
+	display: table-cell;
+	padding: 0.5em 0.75em;
+
+	font: inherit;
+	/* text-align is defined per element */
+	text-decoration: none;
+	text-indent: none;
+	text-transform: none;
+}
+
+td	{
+	font-weight: normal;
+	text-align: left;
+}
+
+th	{
+	font-weight: bold;
+	text-align: center;
+}
+
+/*** HTML 4.01 ***/
+td[align='left'],
+th[align='left']
+{	text-align: left;	}
+
+td[align='center'],
+th[align='center']
+{	text-align: center;	}
+
+td[align='right'],
+th[align='right']
+{	text-align: right;	}
+
+/*** 4.10 Forms ***************************************************************/
+
+form,
+label,
+input,
+button,
+select,
+optgroup,
+option,
+textarea,
+output,
+progress,
+meter,
+fieldset,
+legend
+{	font: inherit;	}
+
+/*-- form --------------------------------------------------------------------*/
+
+form	{
+	display: block;
+	padding: 1em;
+
+	background-color: #ccc;
+}
+
+/*-- Visible form elements ---------------------------------------------------*/
+
+label,
+input,
+button,
+select,
+textarea,
+output,
+progress,
+meter
+{
+	margin: 0.2em;
+	vertical-align: middle;
+}
+
+/*-- label, input, and button ------------------------------------------------*/
+
+label,
+input,
+button
+{
+	display: inline;
+	height: 2em;
+}
+
+input[type=hidden]	{	display: none;	}
+
+input[type=text],
+input[type=search],
+input[type=tel],
+input[type=url],
+input[type=email],
+input[type=password],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time],
+input[type=datetime-local],
+input[type=number]
+{	padding: 0em 0.125em; }
+
+/*
+input[type=range]	{}
+*/
+
+input[type=color]	{
+	min-width: 5em;
+	padding: 0.125em;
+
+	cursor: pointer;
+}
+
+input[type=checkbox],
+input[type=radio]
+{
+	height: 1.2em;
+	width: 1.2em;
+}
+
+input[type=file]	{
+	border: 1px inset;
+	padding: 1px;
+}
+
+/*
+ * input "buttons" and button tags
+ */
+input[type=submit],
+input[type=image],
+input[type=reset],
+input[type=button],
+button
+{	cursor: pointer;	}
+
+input[type=submit],
+input[type=reset],
+input[type=button],
+button
+{	min-width: 5em;	}
+
+input[type=submit],
+button[type=submit]
+{	font-weight: bold;	}
+
+input[type=reset],
+button[type=reset]
+{	font-weight: lighter;	}
+
+/*-- select, datalist, optgroup, and option ----------------------------------*/
+
+select	{	display: inline;	}
+
+datalist	{	display: none;	}
+
+optgroup,
+option
+{	display: block;	}
+
+optgroup	{	font-weight: bold;	}
+
+option	{	font-weight: normal;	}
+
+optgroup > option	{	padding-left: 2.5em;	}
+
+/*-- textarea and output------------------------------------------------------*/
+
+textarea,
+output
+{
+	display: block;
+	padding: 0.25em;
+}
+
+textarea	{	overflow: auto;	}
+
+output	{	border: 1pt inset;	}
+
+/*-- progress and meter ------------------------------------------------------*/
+
+progress,
+meter
+{
+	display: inline;
+	/* TODO: find optimal height */
+	height: 1.2em;
+	min-width: 10em;
+	vertical-align: middle;
+}
+
+/*-- fieldset and legend -----------------------------------------------------*/
+
+fieldset	{
+	display: inline-block;
+	/* border: 0.125em solid; */
+	margin: 0.25em;
+	padding: 0.25em;
+	vertical-align: top;
+}
+
+legend	{
+	display: inline;
+	margin: 0em 0.75em;
+	padding: 0em 0.25em;
+}
+
+/*** 4.11 Interactive elements ************************************************/
+
+details,
+summary
+{	display: block;	}
+
+details	{
+	border:	0.125em solid;
+	margin: 1em 0em;
+	padding: 0.0em 0.5em 0.0em 0.5em;
+}
+details[open]	{
+	padding: 0.0em 0.5em 0.5em 0.5em;
+}
+
+summary	{
+	background-color: #ccc;
+	padding: 0.25em 0.5em 0.25em 0.5em;
+
+	cursor: default;
+}
+summary::before	{
+	float: right;
+	margin: 0em 0em 0.25em 0.25em;
+}
+
+/*----------------------------------------------------------------------------*/
+
+details       > summary	{	margin: 0.0em -0.5em 0.0em -0.5em;	}
+details[open] > summary	{	margin: 0.0em -0.5em 0.5em -0.5em;	}
+
+details       > summary::before	{	content: "\2795";	}
+details[open] > summary::before	{	content: "\2796";	}
+
+/*-- dialog ------------------------------------------------------------------*/
+
+dialog	{	display: none;	}
+
+@media screen {
+	dialog[open]	{
+		bottom: 10%;
+		display: block;
+		left: 10%;
+		max-height: 80%;
+		max-width: 80%;
+		overflow: auto;
+		position: fixed;
+		right: 10%;
+		top: 10%;
+	}
+}
+
+@media print {
+	dialog[open]	{
+		display: block;
+		margin: 1em auto;
+	}
+}
