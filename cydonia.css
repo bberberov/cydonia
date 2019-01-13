@@ -370,7 +370,7 @@ b	{	font-weight: bold;	}
 
 u	{	text-decoration: underline;	}
 
-mark	{	background-color: #ff6; }
+mark	{	background-color: rgba(255, 255, 102, 0.5);	}
 
 /*** 4.6 Links ****************************************************************/
 
