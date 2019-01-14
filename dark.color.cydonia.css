@@ -54,7 +54,10 @@ a.fake:active
 /******************************************************************************/
 
 .bg	{	background-color: #111;	}
-.bg-80	{	background-color: rgba(0, 0, 0, 0.8);	}
+
+.card	{ 	background-color: #222;	}
+.card.transparent	{	background-color: rgba(0,0,0,0.85);	}
+
 .fg	{
 	color: #ffe;
 	fill: #ffe;
