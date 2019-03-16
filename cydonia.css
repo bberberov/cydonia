@@ -207,7 +207,7 @@ p:first-child,
 pre:first-child
 {	margin-top: 0em;	}
 p:last-child,
-pre:first-child
+pre:last-child
 {	margin-bottom: 0em;	}
 
 hr	{
@@ -348,6 +348,7 @@ strong	{
 }
 
 small	{	font-size: 0.6em;	}
+
 s	{	text-decoration: line-through;	}
 
 cite	{	font-style: italic;	}
