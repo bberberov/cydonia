@@ -199,10 +199,8 @@ blockquote
 
 p,
 pre
-{
-	border: none;
-	margin: 1em 0em;
-}
+{	margin: 1em 0em;	}
+
 p:first-child,
 pre:first-child
 {	margin-top: 0em;	}
@@ -212,7 +210,6 @@ pre:last-child
 
 hr	{
 	/* TODO: Review normalize.css for fixups on borders */
-	border: none;
 	border-top: 0.125em solid;
 	border-bottom: 0.125em solid;
 	height: 0em;
@@ -226,7 +223,6 @@ pre	{
 }
 
 blockquote	{
-	border: none;
 	border-left: 0.5em solid #ccc;
 	margin: 1em;
 	padding-left: 0.5em;
