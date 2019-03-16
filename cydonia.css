@@ -51,6 +51,8 @@ address
 	text-transform: none;
 }
 
+/*-- display property --------------------------------------------------------*/
+
 body,
 article, section,
 h1, h2, h3, h4, h5, h6,
@@ -62,7 +64,7 @@ address
 nav, aside
 {	display: inline-block;	}
 
-/*--- Body Defaults ----------------------------------------------------------*/
+/*== body ====================================================================*/
 
 body
 {
@@ -82,7 +84,7 @@ body
 	line-height: normal;
 }
 
-/*----------------------------------------------------------------------------*/
+/*== Remaining section elements ==============================================*/
 
 article, section,
 aside, nav,
@@ -94,6 +96,8 @@ address
 	background-color: transparent;
 	color: inherit;
 }
+
+/*-- Elements other than Headings --------------------------------------------*/
 
 article, section,
 aside, nav,
@@ -107,7 +111,7 @@ address
 	font: inherit;
 }
 
-/*-- Headings, headers and footers -------------------------------------------*/
+/*-- Headings ----------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6
 {
@@ -165,7 +169,7 @@ main, div
 	text-transform: inherit;
 }
 
-/*----------------------------------------------------------------------------*/
+/*-- display property --------------------------------------------------------*/
 
 p,
 hr,
@@ -189,7 +193,7 @@ li,
 dt, dd
 {	display: list-item;	}
 
-/*-- p, hr, pre, blockquote --------------------------------------------------*/
+/*== p, hr, pre, blockquote ==================================================*/
 
 p,
 hr,
@@ -230,7 +234,7 @@ blockquote	{
 	font-style: italic;
 }
 
-/*-- Lists -------------------------------------------------------------------*/
+/*== Lists ===================================================================*/
 
 ol, ul,
 dl
@@ -239,17 +243,12 @@ dl
 	padding: 0em 0em 0em 2.5em;
 }
 
-/* TODO: FIX
-li > ol:first-child	{	margin-top: 0em;	}
-li > ol:last-child	{	margin-bottom: 0em;	}
-li > ul:first-child	{	margin-top: 0em;	}
-li > ul:last-child	{	margin-bottom: 0em;	}
-*/
-
 menu	{
 	margin: 1em;
 	padding: 0em;
 }
+
+/*== List items ==============================================================*/
 
 li,
 dt, dd
@@ -261,10 +260,21 @@ dt, dd
 	text-indent: none;
 }
 
+/*-- li ----------------------------------------------------------------------*/
+
 li	{	display: list-item;	}
 
 ol > li	{	list-style: decimal outside;	}
 ul > li	{	list-style:  square outside;	}
+
+/* TODO: FIX
+li > ol:first-child	{	margin-top: 0em;	}
+li > ol:last-child	{	margin-bottom: 0em;	}
+li > ul:first-child	{	margin-top: 0em;	}
+li > ul:last-child	{	margin-bottom: 0em;	}
+*/
+
+/*-- dt and dd ---------------------------------------------------------------*/
 
 dt, dd
 {	display: block;	}
@@ -272,7 +282,7 @@ dt, dd
 dt	{	font-weight: bold;	}
 dd	{	margin-left: 1em;	}
 
-/*-- Figures -----------------------------------------------------------------*/
+/*== Figures =================================================================*/
 
 figure,
 figcaption
@@ -472,6 +482,7 @@ math	{
 	background-color: transparent;
 	color: inherit;
 }
+
 svg	{	fill: inherit;	}
 
 /* TODO: MathML fonts */
@@ -531,7 +542,8 @@ th	{
 	text-align: center;
 }
 
-/*** HTML 4.01 ***/
+/*== HTML 4.01 ===============================================================*/
+
 td[align='left'],
 th[align='left']
 {	text-align: left;	}
@@ -561,7 +573,7 @@ fieldset,
 legend
 {	font: inherit;	}
 
-/*-- form --------------------------------------------------------------------*/
+/*== form ====================================================================*/
 
 form	{
 	display: block;
@@ -570,7 +582,7 @@ form	{
 	background-color: #ccc;
 }
 
-/*-- Visible form elements ---------------------------------------------------*/
+/*== Visible form elements ===================================================*/
 
 label,
 input,
@@ -721,6 +733,10 @@ details,
 summary
 {	display: block;	}
 
+dialog	{	display: none;	}
+
+/*== details and summary =====================================================*/
+
 details	{
 	border:	0.125em solid;
 	margin: 1em 0em;
@@ -741,7 +757,7 @@ summary::before	{
 	cursor: pointer;
 }
 
-/*----------------------------------------------------------------------------*/
+/*-- details and summary interaction -----------------------------------------*/
 
 details       > summary	{	margin: 0.0em -0.5em 0.0em -0.5em;	}
 details[open] > summary	{	margin: 0.0em -0.5em 0.5em -0.5em;	}
@@ -749,9 +765,7 @@ details[open] > summary	{	margin: 0.0em -0.5em 0.5em -0.5em;	}
 details       > summary::before	{	content: "\2795";	}
 details[open] > summary::before	{	content: "\2796";	}
 
-/*-- dialog ------------------------------------------------------------------*/
-
-dialog	{	display: none;	}
+/*== dialog ==================================================================*/
 
 @media screen {
 	dialog[open]	{
