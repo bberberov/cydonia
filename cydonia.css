@@ -266,6 +266,11 @@ li	{	display: list-item;	}
 
 ol > li	{	list-style: decimal outside;	}
 ul > li	{	list-style:  square outside;	}
+menu > li	{
+	list-style: none inside;
+	width: 100%;
+	padding: 0em 0.5em;
+}
 
 /* TODO: FIX
 li > ol:first-child	{	margin-top: 0em;	}
@@ -310,6 +315,7 @@ figcaption:last-child 	{	margin-top:    0.5em;	}
 
 em, strong, small, s,
 cite, q,
+abbr,
 code, var, samp, kbd,
 sub, sup,
 i, b, u,
@@ -328,7 +334,6 @@ mark
 
 /*
 dfn	{}
-abbr	{}
 ruby	{}
 rt	{}
 rp	{}
@@ -360,6 +365,11 @@ s	{	text-decoration: line-through;	}
 cite	{	font-style: italic;	}
 
 q	{	font-weight: lighter;	}
+
+abbr	{
+	text-decoration: underline;
+	text-decoration-style: dashed;
+}
 
 code, var, samp, kbd
 {	font-family: monospace;	}
