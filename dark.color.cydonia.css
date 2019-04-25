@@ -1,5 +1,5 @@
 /*
- * cydonia v0.0.5+ | Color : Dark
+ * cydonia v0.1.0 | Color : Dark
  * Copyright © 2014–2019 Boian Berberov
  *
  * Released under the terms of the
@@ -11,7 +11,7 @@
  */
 
 /*
- * Based on Living Standard — Last Updated 2 November 2018
+ * Based on HTML Living Standard — Last Updated 15 April 2019
  * https://html.spec.whatwg.org/multipage/#toc-semantics
  */
 
@@ -19,15 +19,16 @@
 
 body	{
 	background-color: #111;
-	color: #ffe;
-	fill: #ffe;
+	border-color: #eed;
+	color: #eed;
+	fill: #eed;
 }
 
 /*** 4.4 Grouping content *****************************************************/
 
 hr	{
-	background-color: #ffe;
-	color: #ffe;
+	background-color: #eed;
+	color: #eed;
 }
 
 blockquote	{	border-color: #444;	}
@@ -55,14 +56,20 @@ a.fake:active
 
 .bg	{	background-color: #111;	}
 
-.card	{ 	background-color: #222;	}
-.card.transparent	{	background-color: rgba(0,0,0,0.85);	}
+.card	{
+	background-color: #222;
+	border-color:     #222;
+}
+.card.transparent	{
+	background-color: rgba(17, 17, 17, 0.866);
+	border-color:     transparent;
+}
 
 .fg	{
-	color: #ffe;
-	fill: #ffe;
+	color: #eed;
+	fill: #eed;
 }
 .fg-disabled	{
-	color: #554;
-	fill: #554;
+	color: #887;
+	fill: #887;
 }
