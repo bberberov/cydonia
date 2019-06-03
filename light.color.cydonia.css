@@ -1,5 +1,5 @@
 /*
- * cydonia v0.1.0 | Color : Light
+ * cydonia v0.1.0+ | Color : Light
  * Copyright © 2014–2019 Boian Berberov
  *
  * Released under the terms of the
@@ -25,11 +25,6 @@ body	{
 }
 
 /*** 4.4 Grouping content *****************************************************/
-
-hr	{
-	background-color: #111;
-	color: #111;
-}
 
 blockquote	{	border-color: #bbb;	}
 
