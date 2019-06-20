@@ -370,10 +370,16 @@ menu > li	{	list-style:    none inside ;	}
 
 li > ol:first-child,
 li > ul:first-child
-{	margin-top: 0em;	}
+{	margin-top:    0em;	}
 li > ol:last-child,
 li > ul:last-child
 {	margin-bottom: 0em;	}
+li > ol:only-of-type,
+li > ul:only-of-type
+{
+	margin-top:    0em;
+	margin-bottom: 0em;
+}
 
 /*-- dt and dd ---------------------------------------------------------------*/
 
@@ -461,6 +467,9 @@ dl + ol,
 dl + ul,
 dl + dl
 {	margin-top: 1em;	}
+
+li > p:first-child:last-of-type
+{	margin-bottom: 0em;	}
 
 /*** 4.5 Text-level semantics *************************************************/
 
