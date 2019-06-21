@@ -1,5 +1,5 @@
 /*
- * cydonia v0.1.0 | Scaling
+ * cydonia v0.1.0+ | Scaling
  * Copyright © 2014–2019 Boian Berberov
  *
  * Released under the terms of the
@@ -19,16 +19,15 @@
 
 @media print	{	body	{	font-size: 11pt;	}	}
 
-@media screen and (max-width:  32ex)	{	body	{	font-size: 0.750em;	}	}
-@media screen and (min-width:  32ex)	{	body	{	font-size: 0.875em;	}	}
-@media screen and (min-width:  40ex)	{	body	{	font-size: 1.000em;	}	}
-@media screen and (min-width: 160ex)	{	body	{	font-size: 1.125em;	}	}
-@media screen and (min-width: 200ex)	{	body	{	font-size: 1.250em;	}	}
-@media screen and (min-width: 240ex)	{	body	{	font-size: 1.500em;	}	}
-@media screen and (min-width: 280ex)	{	body	{	font-size: 1.750em;	}	}
-@media screen and (min-width: 320ex)	{	body	{	font-size: 2.000em;	}	}
-@media screen and (min-width: 480ex)	{	body	{	font-size: 3.000em;	}	}
-@media screen and (min-width: 640ex)	{	body	{	font-size: 4.000em;	}	}
+@media screen and (max-width:  17em)	{	body	{	font-size: 0.750em;	}	}
+@media screen and (min-width:  17em)	{	body	{	font-size: 0.875em;	}	}
+@media screen and (min-width:  21em)	{	body	{	font-size: 1.000em;	}	}
+@media screen and (min-width:  81em)	{	body	{	font-size: 1.125em;	}	}
 
-@media screen and ( (max-width: 40ex)  ,  (max-height: 25em) )	{	body	{	padding: 0em;	}	}
-@media screen and ( (min-width: 40ex) and (max-height: 25em) )	{	body	{	padding: 1em;	}	}
+@media screen and (min-width: 125em)	{	body	{	font-size: 1.250em;	}	}
+@media screen and (min-width: 150em)	{	body	{	font-size: 1.500em;	}	}
+@media screen and (min-width: 200em)	{	body	{	font-size: 2.000em;	}	}
+@media screen and (min-width: 300em)	{	body	{	font-size: 3.000em;	}	}
+@media screen and (min-width: 450em)	{	body	{	font-size: 4.500em;	}	}
+
+@media screen and ( (max-width: 21em), (max-height: 25em) )	{	body	{	padding: 0em;	}	}
