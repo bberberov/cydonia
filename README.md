@@ -15,7 +15,7 @@ A utility stylesheet (CSS)
 
 ### Browser
 
-- Internet Explorer 9+
+- Internet Explorer - not supported
 - Mozilla Firefox 3.6+
 - Chrome/Chromium 4+
 - Safari 3.2+
@@ -24,14 +24,15 @@ A utility stylesheet (CSS)
 
 - Windows - 2000 with Firefox 10 ESR <sup>[&#10033;](https://en.wikipedia.org/wiki/Firefox#Platform_availability)</sup>
 - macOS - OS X Tiger ( [PPC](https://en.wikipedia.org/wiki/PowerPC) ), with Firefox 3.6.28 <sup>[&#10033;](https://en.wikipedia.org/wiki/Firefox#Platform_availability)</sup>
-- Android -  2.1+
-- iOS - 3.2+
+- Android -  2.3+
+- iOS - 4.0+
 
 ### Limiting features
 
 - [HTML5 semantic elements](https://caniuse.com/#feat=html5semantic)
 - [CSS Level 3 Selectors](https://caniuse.com/#feat=css-sel3)
 - [CSS3 Background-image options](https://caniuse.com/#feat=background-img-opts)
+- [CSS initial value](https://caniuse.com/#feat=css-initial-value) - no IE support
 
 ## License
 
