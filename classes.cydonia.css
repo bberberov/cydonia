@@ -104,11 +104,25 @@ blockquote + .attribution	{
 	margin-top: 1.5em;
 }
 
-/*== Support for tty browsers ================================================*/
+/*== Support for media types =================================================*/
 
-svg + span.tty	{	display: none;	}
+@media print	{
+	.media-no-print,
+	.media-screen,
+	.media-tty
+	{	display: none;	}
+}
+
+@media screen	{
+	.media-print,
+	.media-no-screen,
+	.media-tty
+	{	display: none;	}
+}
 
 @media tty	{
-	svg	{	display: none;	}
-	svg + span.tty	{	display: inline;	}
+	.media-print,
+	.media-screen,
+	.media-no-tty
+	{	display: none;	}
 }
