@@ -96,13 +96,12 @@ svg.in-text
 	vertical-align: middle;
 }
 
-blockquote + .attribution	{
-	margin: 0.5em 1em 1em 1em;
+blockquote > .attribution	{	font-style: normal;	}
+blockquote > .attribution:last-child	{
+	margin-bottom: 1em;
 	padding: 0em 0em 0em 4ex;
 }
-.attribution + blockquote	{
-	margin-top: 1.5em;
-}
+blockquote > .attribution:last-child:before	{	content: "\2014\20";	}
 
 /*== Support for media types =================================================*/
 
