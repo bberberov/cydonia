@@ -1,6 +1,6 @@
 /*
- * cydonia v0.1.0 | Classes
- * Copyright © 2014–2019 Boian Berberov
+ * cydonia v0.1.0+ | Classes
+ * Copyright © 2014–2021 Boian Berberov
  *
  * Released under the terms of the
  * European Union Public License version 1.2 only.
@@ -25,13 +25,10 @@
 .maxspect-CT	{	background-position:  50%   0%;	}
 .maxspect-RT	{	background-position: 100%   0%;	}
 
-.maxspect-LM
-{	background-position:   0%  50%;	}
+.maxspect-LM	{	background-position:   0%  50%;	}
 .maxspect,
-.maxspect-CM
-{	background-position:  50%  50%;	}
-.maxspect-RM
-{	background-position: 100%  50%;	}
+.maxspect-CM	{	background-position:  50%  50%;	}
+.maxspect-RM	{	background-position: 100%  50%;	}
 
 .maxspect-LB	{	background-position:   0% 100%;	}
 .maxspect-CB	{	background-position:  50% 100%;	}
@@ -39,7 +36,8 @@
 
 /*----------------------------------------------------------------------------*/
 
-.sidebars, .stretched
+.sidebars,
+.stretched
 {
 	background-position: center;
 	background-repeat: no-repeat;
@@ -51,19 +49,18 @@
 
 /*-- Block -------------------------------------------------------------------*/
 
+.block,
 .block-left,
 .block-center,
 .block-right
 {	display: block;	}
 
-.block-left
-{	margin-right: auto;	}
-.block-center {
-	margin-left: auto;
-	margin-right: auto;
+.block-left  	{	margin-right: auto;	}
+.block-center	{
+             		margin-left:  auto;
+             		margin-right: auto;
 }
-.block-right
-{	margin-left: auto;	}
+.block-right 	{	margin-left:  auto;	}
 
 /*-- Inline-Block ------------------------------------------------------------*/
 
@@ -73,7 +70,7 @@
 .iblock-bottom
 {	display: inline-block;	}
 
-.iblock-top   	{	vertical-align: top;	}
+.iblock-top   	{	vertical-align:    top;	}
 .iblock-middle	{	vertical-align: middle;	}
 .iblock-bottom	{	vertical-align: bottom;	}
 
