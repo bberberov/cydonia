@@ -17,8 +17,9 @@
 .maxspect-LM, .maxspect-CM, .maxspect-RM,
 .maxspect-LB, .maxspect-CB, .maxspect-RB
 {
-	background-size: cover;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .maxspect-LT	{	background-position:   0%   0%;	}
