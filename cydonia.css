@@ -1,6 +1,6 @@
 /*
  * cydonia v0.1.0+ | Baseline
- * Copyright © 2014–2019 Boian Berberov
+ * Copyright © 2014–2019, 2021 Boian Berberov
  *
  * Released under the terms of the
  * European Union Public License version 1.2 only.
@@ -682,7 +682,7 @@ tfoot,
 tr,
 td, th
 {
-	border-color: inherit;
+	border-color: currentColor;
 	color: inherit;
 	fill: inherit;
 }
