@@ -11,7 +11,7 @@
  */
 
 /*
- * Based on HTML Living Standard — Last Updated 15 April 2019
+ * Based on HTML Living Standard — Last Updated 18 October 2021
  * https://html.spec.whatwg.org/multipage/#toc-semantics
  */
 
@@ -591,6 +591,8 @@ a[href]:active	{
 	text-decoration: underline;
 }
 
+/*** The area element is in section 4.8 ***/
+
 /*** 4.7 Edits ****************************************************************/
 
 ins, del
@@ -1042,4 +1044,5 @@ template
 /*
 noscript
 slot
+canvas
 */
