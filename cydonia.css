@@ -468,8 +468,9 @@ dl + ul,
 dl + dl
 {	margin-top: 1em;	}
 
-li > p:first-child:last-of-type
-{	margin-bottom: 0em;	}
+li > p:not(:first-child):last-child,
+li > pre:not(:first-child):last-child
+{	margin-bottom: 1em;	}
 
 /*** 4.5 Text-level semantics *************************************************/
 
